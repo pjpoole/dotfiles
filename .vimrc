@@ -1,3 +1,4 @@
+" ed: yeah, this is all fine. Whatever. I barely know how to use vim
 " Use the Solarized Dark theme
 set background=dark
 colorscheme solarized

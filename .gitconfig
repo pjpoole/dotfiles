@@ -1,3 +1,4 @@
+# TODO: Learn aliases here.
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
@@ -81,7 +82,6 @@
 
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
 
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error
 	# [default] trailing-space: looks for spaces at the end of a line

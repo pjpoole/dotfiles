@@ -1,3 +1,5 @@
+# TODO: See if you like this autocomplete behavior
+
 # Make Tab autocomplete regardless of filename case
 set completion-ignore-case on
 
@@ -36,5 +38,6 @@ set input-meta on
 set output-meta on
 set convert-meta off
 
+# ed: Neat!
 # Use Alt/Meta + Delete to delete the preceding word
 "\e[3;3~": kill-word
