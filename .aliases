@@ -13,6 +13,7 @@ alias p="cd ~/Projects"
 alias g="git"
 # alias h="history"
 # alias j="jobs"
+alias be="bundle exec"
 
 # Git
 alias gssb="git status -sb"
