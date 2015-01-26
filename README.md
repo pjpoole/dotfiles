@@ -7,6 +7,7 @@ Modified from the excellent dotfiles provided by [Mathias Bynens](https://github
 * Modify further; learn aliases provided by this setup.
 * Add brew auto-install commands
 * Move git aliases to .gitconfig
+* Add timestamp to PS1
 
 ## Aliases and commands
 * `a`: `atom .` unless provided an argument
