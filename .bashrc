@@ -1,1 +1,1 @@
-[ -n "$PS1" ] && source ~/.path;
+source ~/.path;
