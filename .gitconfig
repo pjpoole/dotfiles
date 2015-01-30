@@ -164,3 +164,7 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[user]
+	name = Peter Poole
+	email = peter.j.poole@gmail.com
