@@ -1,3 +1,5 @@
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 export PATH=\
 /Applications/Postgres.app/Contents/Versions/9.3/bin:\
 /bin:\
@@ -12,3 +14,7 @@ export PATH=\
 /usr/texbin:\
 /usr/local/mysql/bin:\
 .
+
+export PATH=$JAVA_HOME:$PATH
+export CASSANDRA_HOME=~/cassandra
+export PATH=$CASSANDRA_HOME:$CASSANDRA_HOME/bin:$PATH
