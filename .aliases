@@ -1,4 +1,4 @@
-# Easier navigation: .., ..., ...., ....., ~ and -
+f# Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -14,11 +14,6 @@ alias g="git"
 # alias h="history"
 # alias j="jobs"
 alias be="bundle exec"
-
-# Git
-alias gssb="git status -sb"
-alias gcam="git commit -am"
-alias gcAm="git add -A && git commit -m"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
