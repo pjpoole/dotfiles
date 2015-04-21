@@ -1,4 +1,4 @@
-f# Easier navigation: .., ..., ...., ....., ~ and -
+# Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -115,6 +115,9 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 # Ring the terminal bell, and put a badge on Terminal.app’s Dock icon
 # (useful when executing time-consuming commands)
 alias badge="tput bel"
+
+# Pop up a terminal-notifier window to tell (similar purpose to above)
+alias td="terminal-notifier -title \"Terminal\" -message \"Wow, such done\""
 
 # Intuitive map function
 # For example, to list all directories that contain a certain file:
