@@ -1,22 +1,31 @@
-export PATH=\
-/Users/pjpoole/cassandra:\
-/Users/pjpoole/cassandra/bin:\
-/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home:\
-/Applications/Postgres.app/Contents/Versions/9.3/bin:\
-/bin:\
-/usr/local/bin:\
-/usr/local/opt/coreutils/bin:\
-/usr/local/opt/ruby/bin:\
-/usr/bin:\
-/sbin:\
-/usr/sbin:\
-/usr/local/sbin:\
-/usr/X11/bin:\
-/usr/texbin:\
-/usr/local/mysql/bin:\
-.
+pathadd() {
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH="${PATH:+"$PATH:"}$1"
+    fi
+}
 
 export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH=$JAVA_HOME:$PATH
 export CASSANDRA_HOME=~/cassandra
-export PATH=$CASSANDRA_HOME:$CASSANDRA_HOME/bin:$PATH
+
+
+pathadd $JAVA_HOME:$PATH
+pathadd $CASSANDRA_HOME:$CASSANDRA_HOME/bin:$PATH
+pathadd /Users/pjpoole/cassandra
+pathadd /Users/pjpoole/cassandra/bin
+pathadd /Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
+pathadd /Applications/Postgres.app/Contents/Versions/9.3/bin
+pathadd /bin
+pathadd /usr/local/bin
+pathadd /usr/local/opt/coreutils/bin
+pathadd /usr/local/opt/ruby/bin
+pathadd /usr/bin
+pathadd /sbin
+pathadd /usr/sbin
+pathadd /usr/local/sbin
+pathadd /usr/X11/bin
+pathadd /usr/texbin
+pathadd /usr/local/mysql/bin
+pathadd .
+
+export PATH
+unset -f pathadd
