@@ -4,14 +4,20 @@ pathadd() {
     fi
 }
 
-export JAVA_HOME=$(/usr/libexec/java_home)
-export CASSANDRA_HOME=~/cassandra
+JAVA_HOME=$(/usr/libexec/java_home)
+if [ -n "$JAVA_HOME"]; then
+  export JAVA_HOME
+fi
 
+if [ -d ~/cassandra ]; then
+  export CASSANDRA_HOME=~/cassandra
+fi
 
-pathadd $JAVA_HOME:$PATH
-pathadd $CASSANDRA_HOME:$CASSANDRA_HOME/bin:$PATH
-pathadd /Users/pjpoole/cassandra
-pathadd /Users/pjpoole/cassandra/bin
+PATH=""
+
+pathadd $JAVA_HOME
+pathadd $CASSANDRA_HOME
+pathadd $CASSANDRA_HOME/bin
 pathadd /Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
 pathadd /Applications/Postgres.app/Contents/Versions/9.3/bin
 pathadd /bin
