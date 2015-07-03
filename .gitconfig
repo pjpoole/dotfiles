@@ -1,6 +1,8 @@
 # TODO: Learn aliases here.
 [alias]
 
+	addnw = !sh -c 'git diff -w --no-color "$@" | git apply --cached --ignore-whitespace' -
+
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
