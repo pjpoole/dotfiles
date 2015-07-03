@@ -1,7 +1,7 @@
 # TODO: Learn aliases here.
 [alias]
 
-	addnw = !sh -c 'git diff -w --no-color "$@" | git apply --cached --ignore-whitespace' -
+	addnw = "!sh -c 'git diff -w --no-color "$@" | git apply --cached --ignore-whitespace' -"
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
@@ -10,7 +10,7 @@
 	s = status -s
 
 	# Show the diff between the latest commit and the current state
-	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+	d = !"git diff-index -w --quiet HEAD -- || clear; git --no-pager diff -w --patch-with-stat"
 
 	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
 	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
