@@ -30,6 +30,7 @@ pathadd /usr/sbin
 pathadd /usr/local/sbin
 pathadd /usr/X11/bin
 pathadd /usr/texbin
+pathadd /opt/td-agent/usr/sbin
 pathadd /usr/local/mysql/bin
 pathadd .
 
