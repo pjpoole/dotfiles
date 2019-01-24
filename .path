@@ -4,34 +4,20 @@ pathadd() {
     fi
 }
 
-JAVA_HOME=$(/usr/libexec/java_home)
+JAVA_HOME=$(/usr/libexec/java_home 2> /dev/null || echo "")
 if [ -n "$JAVA_HOME" ]; then
   export JAVA_HOME
-fi
-
-if [ -d ~/cassandra ]; then
-  export CASSANDRA_HOME=~/cassandra
 fi
 
 PATH=""
 
 pathadd $JAVA_HOME
-pathadd $CASSANDRA_HOME
-pathadd $CASSANDRA_HOME/bin
-pathadd /Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
-pathadd /Applications/Postgres.app/Contents/Versions/9.3/bin
 pathadd /bin
 pathadd /usr/local/bin
-pathadd /usr/local/opt/coreutils/bin
-pathadd /usr/local/opt/ruby/bin
 pathadd /usr/bin
 pathadd /sbin
 pathadd /usr/sbin
 pathadd /usr/local/sbin
-pathadd /usr/X11/bin
-pathadd /usr/texbin
-pathadd /opt/td-agent/usr/sbin
-pathadd /usr/local/mysql/bin
 pathadd .
 
 export PATH
