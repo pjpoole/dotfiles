@@ -1,6 +1,9 @@
 # # Add `~/bin` to the `$PATH`
 # export PATH="$HOME/bin:$PATH";
 
+# This comes first, for the sake of the bash_prompt, below.
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -54,5 +57,3 @@ done;
 # # ed: No need
 # # Add `killall` tab completion for common apps
 # complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
