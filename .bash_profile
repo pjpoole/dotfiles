@@ -1,8 +1,6 @@
 # # Add `~/bin` to the `$PATH`
 # export PATH="$HOME/bin:$PATH";
 
-# This comes first, for the sake of the bash_prompt, below.
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -11,6 +9,9 @@ for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
+
+# This comes after the bash_prompt to avoid certain stupidity with double prompt marks
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 eval "$(rbenv init -)"
 
