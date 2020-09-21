@@ -114,9 +114,9 @@ PS1+="\[${white}\] in ";
 PS1+="\[${green}\]\w"; # working directory
 PS1+="\$(prompt_git \"${white} on ${violet}\")"; # Git repository details
 PS1+="\n";
-if command -v iterm2_prompt_mark &> /dev/null
+if [ $TERM_PROGRAM = 'iTerm.app' ]
 then
-	PS1+='\[$(iterm2_prompt_mark)\]'
+	PS1+='\[$(iterm2_prompt_mark)\]';
 fi
 PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
 export PS1;
