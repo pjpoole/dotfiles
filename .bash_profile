@@ -15,6 +15,9 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 
 eval "$(rbenv init -)"
 
+export NVM_DIR="${HOME}/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
 
