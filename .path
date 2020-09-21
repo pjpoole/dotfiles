@@ -14,6 +14,7 @@ PATH=""
 pathadd $JAVA_HOME
 pathadd /bin
 pathadd /usr/local/bin
+pathadd /usr/local/sbin
 pathadd /usr/bin
 pathadd /sbin
 pathadd /usr/sbin
